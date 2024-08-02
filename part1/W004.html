@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        } */
+        /* form {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        } */
+        input {
+            width: 30%;
+            padding: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        /* button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        } */
+       
+    </style>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" maxlength="15" required> <br> 
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" maxlength="10" required> <br>
+
+        <label for="Phone">Phone:</label>
+        <input type="phone" id="phone" name="phone" placeholder="Enter phone" maxlength="10" required><br>
+
+        <input type="radio" name="Batch"> Batch A <br> 
+        <input type="radio" name="Batch"> Batch B <br> 
+
+         <input type="date" min="2024-08-02"> <br>
+         <input type="time" > <br>
+         <input type="checkbox"> B+ <br>
+         <input type="color"> <br/>
+         <input type="range"> B+ <br>
+        <input type="checkbox"> A+ <br>
+        <input type="checkbox"> B+ <br>
+        <select> 
+            <option> A+ </option>
+            <option> B+ </option>
+            <option> AB+ </option>
+            <option> O+ </option>
+            <option> A- </option>
+            <option> B- </option>
+            <option> AB- </option>
+            <option> O- </option>
+        </select>
+            <br>  </br> 
+        <button type="submit">Login</button>
+        <button type="reset">reset</button>
+     
+        <p>
+            <p href="#">Forgot password?</p> <br> 
+            <p href="#">Create an account</p>
+        </p>
+    </form>
+</body>
+</html>
