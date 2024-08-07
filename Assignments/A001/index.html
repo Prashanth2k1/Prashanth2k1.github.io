@@ -1,186 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix Clone</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #000000;
-        color: #ffffff;
-      }
-      .header {
-        background-color: #141414;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header img {
-        width: 100px;
-      }
-      .header .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
-      .header .nav-links li {
-        display: inline;
-      }
-      .header .nav-links a {
-        color: white;
-        text-decoration: none;
-      }
-      .banner {
-        background: linear-gradient(
-            rgba(0, 0, 0, 0.944),
-            rgba(0, 0, 0, 0.128),
-            rgba(0, 0, 0, 0.931)
-          ),
-          url("https://assets.nflxext.com/ffe/siteui/vlv3/826348c2-cdcb-42a0-bc11-a788478ba5a2/6d20b198-e7ab-4e9f-a1aa-666faa0298f9/IN-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_a67d8c9e-8121-4a74-98e4-8005eb2df227_large.jpg");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-        .banner h1 {
-            font-size: 3rem;
-        }
-        .banner p {
-            font-size: 1.5rem;
-        }
-        .content {
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section h2 {
-            margin-bottom: 10px;
-        }
-        .movie-row {
-            display: flex;
-            overflow-x: scroll;
-            gap: 10px;
-        }
-        .movie-row img {
-            height: 200px;
-            border-radius: 5px;
-        }
-        .movie-row::-webkit-scrollbar {
-        height: 3px;
-        width: 1px;
-      }
-      .movie-row::-webkit-scrollbar-thumb {
-        background-color: rgba(255, 0, 0, 0.515);
-        border-radius: 5px;
-      }
-      .movie-row::-webkit-scrollbar-track {
-        background: #141414;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-        alt="Netflix Logo"
-      />
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">TV Shows</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">New & Popular</a></li>
-        <li><a href="#">My List</a></li>
-      </ul>
-    </header>
-    <section class="banner">
-      <div>
-        <h1>Unlimited movies, TV shows, and more.</h1>
-        <p>Watch anywhere. Cancel anytime.</p>
-      </div>
-    </section>
-    <section class="content">
-      <div class="section">
-        <h2>Popular on Netflix</h2>
-        <div class="movie-row">
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXv9UDtXqQmlucaK8GGqsM7rPRDlXHvfum1tHNfZYG0VswoR6uVP8t2MHXEWGkxu6t0xh8rXARCs6p_taSsWaUgZCCf74WjNFvC_F7qKaGJFFlFDIOAt6TIy_qjnydLqD-sbEw.jpg?r=23e"
-            alt="THE WITCHER"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbgcp1h0LD9uChIJ-5vqlLO5b75n3-0Oyn3T2wRabaHXKLGwaJo6u6SiVs3wzEoQ02kgWTHsbbU-EGuff5AaE26Nxh3a16sO_vIH.jpg?r=66a"
-            alt="SALAAR"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeYOwt43Qbc_MdUj7_ijb7rWI4t9INWI8Gzlh36Bgd3jlQiNWT3lt2cxKmXfysTMgRfHSbjLbt62U0s9I_W8Lbu-JFZXuG6N0dE.jpg?r=434"
-            alt="ANIMAL"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABf-LFwANbcC06hFAXkmxcX-YGliPKzK854nrSdSa4xrhOAZf2YNRDDlEJ9XBJ2AzrQwV8_JOcf4JEdPtJMqbX17L3BNd3WUactI3.jpg?r=ae7"
-            alt="Gangs of Godavari"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR871v8B_5W4-2bL3zy0-l1jI1d_kDdYwjnAQXO84kUMxrrbFDunGwXrJN1H_TbQ3qqap3HbzIMjw8HyQuWDGhfgHarGKPtE6JfLZ-awelcRb_ipCja19iEU7yNWXTtp7yvN.jpg?r=347"
-            alt="Red Notice"
-          />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=auto">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root{
+    --primary-color:#E50914;
+}
+.container{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    display:flex;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    font-style: bold;
+    margin: 0;
+    color:white;
+    text-align: center;
+}
+.button-prop{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color:var(--primary-color);
+    border-radius: 4px;
+    border:none;
+    color:white;
+    width: 65px;
+    height: 30px;
+    cursor:pointer;
+    margin-top: 10px;
+    
+}
+.sel-prop{
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    font-size: 14px;
+    width: 100px;
+    height: 30px;
+    border-color: grey;
+    background-color:rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: right;
+    margin-left: 650px;
+    margin-top: 10px;
+}
+.container-text{
+    /* width: max-content;
+    height: max-content; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.background-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.744),
+        rgba(0, 0, 0, 0.128),
+        rgba(0, 0, 0, 0.731)
+      ),url(images/homebg.png); 
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    
+
+    /* align-items: center; */
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    /* padding: 10px; */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.logo{
+   margin-left: 10px;
+   margin-top: 10px;
+}
+.header-text{
+    position:absolute;
+    text-align: center;
+    text-align: center;
+    margin-top: 200px;
+    z-index: 1;
+    
+}
+.header-text h3{
+    margin-bottom: 20px;
+}
+/* .email-signup{
+    background:white;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    overflow: hidden;
+} */
+.input-prop{
+    flex:1;
+    outline: 0;
+    width:350px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 4px;
+    font-family:  'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: 1x solid grey;
+    
+    
+}
+.email-signup button{
+    outline: 0;
+    border: 0;
+    width: 120px;
+    height: 52px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-family:  'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color:white
+}
+input::placeholder{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.features{
+    padding: 0 12%;
+    
+}
+.row{
+    display:flex;
+    width:100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    margin: auto;
+    width: 90%;
+    /* align-items: left; */
+    
+}
+/* 
+.frame{
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    width: 640px;
+    height: 360px;
+}
+.tv-image {
+    width: 90%;
+    height: 100%;
+}
+
+.tv-video {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    object-fit: fill;
+} */
+
+.features h2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: right 100px;
+}
+.features p{
+    text-align: left;
+}
+.bor{
+    width: 100%;
+    border:2.5px solid grey;
+    padding: 0;
+}
+
+.faq{
+    padding: 15px;
+    font-size: 22px;
+    
+    
+}
+.faq h2{
+    text-align: center;
+}
+
+.asc{
+    margin: 60px auto;
+    width:100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+label::after{
+    content:'+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+}
+input[type="radio"]
+{
+    display: none;
+}
+.content{
+    background:#303030;
+    text-align : left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow : hidden;
+}
+
+input[type="radio"]:checked + label+ .content{
+    max-height: 600px;
+    padding: 30px 20px ;
+}
+
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 6px solid#333;
+    color: #777;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight:400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis:25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+
+}
+
+
+
+</style>
+<body>
+    <container class="container">
+        <div class="background-container">
+            <nav>
+            <img class="logo" src="images/Netflixlogo.png" width="200" height="100"></img>
+    <select class="sel-prop">
+        <option>English</option>
+        <option>Hindi</option>
+    </select>
+    <button class="button-prop">Sign In</button>
+            </nav>
+        <div class="header-text">
+           <h1 style="font-size: 40px;">Unlimited movies, TV shows and more</h1> 
+            <h3 style="font-size: 20px;">Watch anywhere. Cancel anytime.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership. </p>
+            <form class="email-signup">
+                <input class="input-prop" type="email" placeholder="Email address" required>
+                <button type="submit">Get Started</button>
+            </form>
+            
         </div>
-      </div>
-      <div class="section">
-        <h2>Trending Now</h2>
-        <div class="movie-row">
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXIAlY7lO4GBOYh3mukbhv-vp7mdmLg2FEJ527pfl1WCElXOpEnV7trjWN1JyG5Tdj665CkE0HSd0U4S6kMQnan4-d663kqHfhIIdvAXmr_fnBxFizDnK9J6DcyjHQ0Yx9tjKQ.jpg?r=158"
-            alt="SHADOW HUNTER"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXUDjEHClZcCZgm-5UafFaYFSFXGb96kmYBwNq71rriMHWHMZY83exiicchhK-lhdOsq15K6vacqcmqlPk2_cpXpPsLttRNxtER5NLceNw7m4Ujh1qHTTRjWJaChtdaK0bvsCJNTfRS4RHAwbrgJ-HjQ3h3PvGOAAIV44fF7sbDglzfyHBU1i-hzAR037_8C_rwiYXy4zhaOxnW2VY8mXtjLrhuuUyr-r3Ea7rXsLkcX757FgBqMWzpQ--kSil258pvVI6rfaTB0OHhtDrzsfJmyG5IQoscreZ85K7Epwc0ASX-X7jZA55olXPl1uTjz1B76EvE_I2QgkzBsRU8R8tk.jpg?r=0a0"
-            alt="Maharaja"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXFBcPJBOi-FNIcF0KQxp4SSFkob-prBrH2VYfahc6OEXLkC7LpvoVamC6R0ywxsT1pVzNhFpnZtACXjvNRVSP4mHxNhOWxDcDw.jpg?r=cf7"
-            alt="Goat Life"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbgcp1h0LD9uChIJ-5vqlLO5b75n3-0Oyn3T2wRabaHXKLGwaJo6u6SiVs3wzEoQ02kgWTHsbbU-EGuff5AaE26Nxh3a16sO_vIH.jpg?r=66a"
-            alt="SALAAR"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSCFopaD94HDNI50kc2S0zbFr11Uc4DhN2xSEXRTgyyTaxOXWwzVO1QzK74Be4ekN7BG7lqaZ_d_Elk1akcDAp_T3WxLck41KGDD.jpg?r=4bc"
-            alt="Hi Nanna"
-          />
+</div>
+        
+    </container>
+    
+    <input type="email" placeholder="Email address">
+        <button class="button-prop">
+            Get Started >
+        </button>
+        <div class="features">
+            <div class="row">
+                <div class="text-col">
+               <h2>Enjoy on your TV</h2>
+                <p>
+                    Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                </p>
+                </div>
+                <div class="img-col">
+                    <!-- <div class="frame"> -->
+                    <img class="tv-image" src="images/img-1.png">
+                    <!-- <video class="tv-video" src="videos/video-tv-in-0819.m4v" type="video/mp4" autoplay loop muted></video>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="img-col">
+                    <!-- <div class="frame"> -->
+                    <img class="tv-image" src="images/img-2.png">
+                    <!-- <video class="tv-video" src="videos/video-tv-in-0819.m4v" type="video/mp4" autoplay loop muted></video>
+                    </div> -->
+                </div>
+                <div class="text-col" style="align-items: right;">
+                <h2>Download your shows to watch offline</h2>
+                <p>
+                Save your favourites easily and always have something to watch.
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-col">
+               <h2>Watch everywhere</h2>
+                <p>
+                    Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
+                </p>
+                </div>
+                <div class="img-col">
+                    <!-- <div class="frame"> -->
+                    <img class="tv-image" src="images/img-3.png">
+                    <!-- <video class="tv-video" src="videos/video-tv-in-0819.m4v" type="video/mp4" autoplay loop muted></video>
+                    </div> -->
+                </div>
+            </div>
+            <div class="bor"></div>
+            <div class="row">
+                <div class="img-col">
+                  
+                    <img class="tv-image" src="images/img-4.png">
+                    
+                </div>
+                <div class="text-col">
+                <h2>Create profiles for kids</h2>
+                <p>
+                    Send children on adventures with their favourite characters in a space made just for them—free with your membership.
+                </p>
+                </div>
+            </div>
+            <div class="bor"></div>
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <ul class="accordion">
+                    <li>
+                        <input type="radio" name="accordion" id="first">
+                        <label for="first">What is Netflix?</label>
+                        <div class="content">
+                            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+                                You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="second">
+                        <label for="second">How much does Netflix cost?</label>
+                        <div class="content">
+                            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="third">
+                        <label for="third">Where can I watch?</label>
+                        <div class="content">
+                            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                                You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="fourth">
+                        <label for="fourth">How do I Cancel?</label>
+                        <div class="content">
+                            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="fifth">
+                        <label for="fifth">What can I Watch on Netflix?</label>
+                        <div class="content">
+                            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="radio" name="accordion" id="sixth">
+                        <label for="sixth">Is Netflix good for kids?</label>
+                        <div class="content">
+                            <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+
+                                Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <h2>Questions? Call 000-800-919-1694</h2>
+                <div class="row"></div>
+                <div class="col">
+                    <a href="#">FAQ</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Speed Test</a>
+                </div>
+                <div class="col">
+                    <a href="#">Help Center</a>     
+                    <a href="#">Jobs</a>
+                    <a href="#">Cookies Preferences</a>
+                    <a href="#">Legal Notices</a>
+                </div>
+                <div class="col">
+                    <a href="#">Account</a>     
+                    <a href="#">Ways to Watch</a>
+                    <a href="#">Corporate Infromation</a>
+                    <a href="#">Only on Netflix</a>
+                </div>
+                <div class="col">
+                    <a href="#">Media Center</a>     
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Conatact Us</a> 
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="section">
-        <h2>Top Picks for You</h2>
-        <div class="movie-row">
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa1hIhlD-HfyNEwi_Y00KpDBh88b_GEtOoVWfh9VjCiYWgwYv35Me4lWu1w30DuF7f8scIPK8pPQztQm01WxYHIBskHKCn32lKs.jpg?r=718"
-            alt="Virupaksha"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaxRfyQp1AmI_-NvaELqaBKeuLR_0E-yQA7rQY8uQl8JOr2Lv3SFKoneg_V8QY1vHrGEqhj5PlsoK926lKvjUfjaXAqcfpqFP0QMtgSc2qpD1ZXiqjyl2wr6XeHKdPcfF3Ot_Q.jpg?r=c0e"
-            alt="Peaky blinder"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWFAIa8SCifyHpH4nYjBREVfkRxYpASsUTPUcwo1PzdjqszqG_mfvQiVhoA-J0h4aA2jp4WXdROrsWtLVTtAFpEoIH1xKnqlNPw.jpg?r=e61"
-            alt="Tillu Square"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXFUhCrT8LgT5eiNMCSHkOc8rjKXoaviYDFw0S20Ixyf0CDGh832IJvDqvpWxPbqvBVWVrtHszfNRZV10PlJ44tQ6sF_kY4ueq0.jpg?r=5e8"
-            alt="Guntur Karam"
-          />
-          <img
-            src="https://occ-0-2042-3663.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXjA49NtFBXVR0cbfh8B94osXW1PYYe8wdyJIYrnih4BhVjogjdol48gm-lgbcZxCEw66EH_abCo3yEkM0s9Cv8I9dXsihTG1X7VrzweKAJj6SLlPxhDKs3YFpgWC29gRiub.jpg?r=d7f"
-            alt="Rana Naidu"
-          />
-        </div>
-      </div>
-    </section>
-  </body>
+       
+        
+
+</body>
 </html>
