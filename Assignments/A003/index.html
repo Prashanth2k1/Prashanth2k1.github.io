@@ -77,7 +77,7 @@
             padding: 8px; 
             background-color: #1877f2;
             color: white;
-            border: none; /* Corrected border property */
+            border: none; 
             border-radius: 5px;
             font-size: 14px;
             cursor: pointer;
@@ -87,19 +87,22 @@
         }
         .login-form .create-account {
             background-color: #42b72a;
-            margin-top: 8px; /* Reduce margin */
+            margin-top: 8px; 
         }
         .login-form .create-account:hover {
             background-color: #36a420;
         }
         .login-form a {
             color: #1877f2;
-            text-decoration: none;
+            text-decoration: none; /* Default: no underline */
             display: block;
             margin: 8px 0; 
         }
+        .login-form a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
         .page-info {
-            margin-top: 20px; /* Adjust top margin */
+            margin-top: 20px; 
             text-align: center;
             font-weight: bold;
         }
